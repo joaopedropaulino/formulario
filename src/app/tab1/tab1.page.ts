@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +7,29 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  constructor(private alertController: AlertController) {}
 
-  constructor() {}
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Por favor coloque o email de recuperaçao',
+      buttons: ['OK'],
+      inputs: [
+        {
+          type:'email',
+          placeholder: 'Email',
+          attributes: {
+            maxlength: 30,
+          },
+        },
+        {
+          type: 'password',
+          placeholder: 'Senha',
+          min: 1,
+          max: 100,
+        }
+      ],
+    });
 
+    await alert.present();
+  }
 }
