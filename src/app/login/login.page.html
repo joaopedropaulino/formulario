@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-card class="card">
+
+
+<ion-item class="email">
+  <ion-label>Email: </ion-label>
+  <ion-input type="email" placeholder="example123@gmail.com"></ion-input>
+</ion-item>
+
+<ion-item class="senha">
+  <ion-label>Senha: </ion-label>
+  <ion-input type="password" value=""></ion-input>
+</ion-item>
+<ion-button fill="clear" class="esqsenha" color="verde" (click)="presentAlert()">Esqueci a senha</ion-button>
+
+<ion-button class="ent" color="verde"   >Entrar</ion-button>
+<ion-button class="but" color="verde"  routerLink="/cadastro" >Cadastar</ion-button>
+
+</ion-card>
+</ion-content>

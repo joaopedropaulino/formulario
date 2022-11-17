@@ -21,12 +21,6 @@ export class Tab1Page {
             maxlength: 30,
           },
         },
-        {
-          type: 'password',
-          placeholder: 'Senha',
-          min: 1,
-          max: 100,
-        }
       ],
     });
 
