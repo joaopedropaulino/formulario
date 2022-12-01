@@ -8,35 +8,37 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card  class="card">
 
+  <ion-card  class="card">
+    <form [formGroup]="formCadastro">
   <ion-item class="nome">
     <ion-label>Nome: </ion-label>
-    <ion-input placeholder="João"></ion-input>
+    <ion-input formControlName="nome" placeholder="João"></ion-input>
   </ion-item>
 
   <ion-item class="email">
     <ion-label>Email: </ion-label>
-    <ion-input type="email" placeholder="example123@gmail.com"></ion-input>
+    <ion-input formControlName="email" type="email" placeholder="example123@gmail.com"></ion-input>
   </ion-item>
 
   <ion-item class="cpf">
     <ion-label>CPF</ion-label>
-    <ion-input maxlength="14" placeholder="000.000.000-00"></ion-input>
+    <ion-input formControlName="cpf" maxlength="14" placeholder="000.000.000-00"></ion-input>
   </ion-item>
 
   <ion-item class="senha">
     <ion-label>Senha: </ion-label>
-    <ion-input type="password" value=""></ion-input>
+    <ion-input formControlName="senha" type="password" value=""></ion-input>
   </ion-item>
 
 
   <ion-item class="csenha">
     <ion-label>Confirmar senha: </ion-label>
-    <ion-input type="password" placeholder=""></ion-input>
+    <ion-input formControlName="confirmaSenha" type="password" placeholder=""></ion-input>
   </ion-item>
 
-  <ion-button class="but" expand="block" color="verde" (click)="presentToast('bottom')">Salvar</ion-button>
+  <ion-button class="but" expand="block" color="verde" (click)="salvarCadastro()">Salvar</ion-button>
+</form>
 
 </ion-card>
 </ion-content>
